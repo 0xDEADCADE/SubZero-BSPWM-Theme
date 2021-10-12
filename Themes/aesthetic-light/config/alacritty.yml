@@ -1,0 +1,52 @@
+window:
+  padding:
+    x: 20
+    y: 20
+
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+  bold:
+    family: JetBrains Mono
+    style: Bold
+
+  italic:
+    family: JetBrains Mono
+    style: Italic
+
+  bold_italic:
+    family: JetBrains Mono
+    style: Regular Italic
+
+  size: 9.5
+
+colors:
+  primary:
+    background: '#fdfdfd'
+    foreground: '#0a0c0b'
+
+  normal:
+    black: '#2b2b2b'
+    red: '#bf5858'
+    green: '#508a50'
+    yellow: '#ab8e38'
+    blue: '#557b9e'
+    magenta: '#8b6a9e'
+    cyan: '#458a8a'
+    white: '#85858a'
+
+  bright:
+    black: '#3b3b37'
+    red: '#f55050'
+    green: '#219e21'
+    yellow: '#d4ac35'
+    blue: '#468dd4'
+    magenta: '#a26fbf'
+    cyan: '#468dd4'
+    white: '#7e7e75'
+
+background_opacity: 0.7
+
+live_config_reload: true

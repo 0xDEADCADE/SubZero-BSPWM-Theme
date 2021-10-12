@@ -1,0 +1,89 @@
+configuration {
+	font:				"Rubik 10";
+	sidebar-mode: 			false;
+}
+
+@theme "/dev/null"
+
+element-text, element-icon {
+    	background-color:		inherit;
+    	text-color:       		inherit;
+}
+
+* {
+    	bg:				#151515;
+	fg:				#e8e8d3;
+	button:				#1c1c1c;
+	accent:				#687363;
+
+    	background-color:           	@bg;
+    	text-color:                    	@fg;
+}
+
+window {
+    	border-radius:                  7px;
+    	width:				500px;
+}
+
+prompt {
+    	enabled: 			false;
+    	padding:                        10px;
+	background-color:		@button;
+	text-color: 			@fg;
+   	border-radius:                  0px;
+}
+
+textbox-prompt-colon {
+	expand: 			false;
+	str: 				" Change theme ";
+	background-color: 		@button;
+	text-color: 			@fg;
+    	padding:                        15px 30px 15px 30px;
+    	border-radius: 			6px;
+}
+
+inputbar {
+	children:			[ textbox-prompt-colon ];
+    	spacing:                        0px;
+    	expand:                         false;
+    	border-radius:                  0px;
+    	margin:                         0px;
+    	padding:                        0px;
+    	position:                       center;
+}
+
+listview {
+    	columns:			1;
+    	lines:				4;
+    	spacing:                        5px;
+    	cycle:                          false;
+    	dynamic:                        true;
+    	layout:                         vertical;
+}
+
+mainbox {
+    	children:                       [ inputbar, listview ];
+    	spacing:                        10px;
+    	margin:                         32px;
+}
+
+element {
+    	background-color:               @button;
+    	text-color:                     @fg;
+    	orientation:                    vertical;
+    	border-radius:                  6px;
+}
+
+element-text {
+	font:				"Rubik 10";
+    	expand:                         true;
+    	horizontal-align:               0.5;
+    	vertical-align:                 0;
+    	margin:                         0px 0px 15px 0px;
+}
+
+element selected {
+    	background-color:               @accent;
+    	text-color:                     @bg;
+    	border-radius:                  6px;
+}

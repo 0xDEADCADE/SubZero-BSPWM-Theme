@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ -f $(which discocss 2>/dev/null) ]]; then
+    echo "#!/bin/bash" > $SUBZERO_THEME_BIN/discocss-nostart
+    head -n-2 $(which discocss) >> $SUBZERO_THEME_BIN/discocss-nostart
+    chmod 0755 $SUBZERO_THEME_BIN/discocss-nostart
+fi

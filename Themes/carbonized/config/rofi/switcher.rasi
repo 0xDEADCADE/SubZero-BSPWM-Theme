@@ -1,0 +1,114 @@
+configuration {
+	font:                      		"Rubik 10";
+    disable-history:                false;
+	sidebar-mode: 					false;
+}
+
+@theme "/dev/null"
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+* {
+    background-color:               #b5b5aa;
+    text-color:                     #2b2b2b;
+}
+
+window {
+    transparency:                   "real";
+    border-radius:                  0px;
+    width:			500px;
+}
+
+prompt {
+    enabled: 						false;
+    padding:                        10px;
+	background-color: 				#9e9e95;
+	text-color: 					#2b2b2b;
+    border-radius:                  0px;
+}
+
+textbox-prompt-colon {
+	expand: 						false;
+	str: 							" Change theme ";
+	background-color: 				#9e9e95;
+	text-color: 					#2b2b2b;
+    padding:                        15px 30px 15px 30px;
+    border-radius: 6px;
+}
+
+inputbar {
+	children: 						[ textbox-prompt-colon ];
+    spacing:                        0px;
+    background-color:               #b5b5aa;
+    text-color:                     #e8e8d3;
+    expand:                         false;
+    border-radius:                  0px;
+    margin:                         0px 0px 0px 0px;
+    padding:                        0px;
+    position:                       center;
+}
+
+listview {
+    columns:						1;
+    lines:							4;
+    spacing:                        5px;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               #b5b5aa;
+    children:                       [ inputbar, listview ];
+    spacing:                        10px;
+    margin:                         32px;
+}
+
+element {
+    background-color:               #9e9e95;
+    text-color:                     #2b2b2b;
+    orientation:                    vertical;
+    border-radius:                  6px;
+}
+
+element-text {
+	font:							"rubik 10";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0;
+    margin:                         15px 0px 15px 0px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               #9e9e95;
+    text-color:                     #b5b5aa;
+    border-radius:                  6px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               #2b2b2b;
+    text-color:                     #b5b5aa;
+}
+
+element selected {
+    background-color:               #2b2b2b;
+    text-color:                     #b5b5aa;
+    border:                  		0px;
+    border-radius:                  6px;
+    border-color:                  	#9e9e95;
+}
+
+element selected.urgent {
+    background-color:               #9e9e95;
+    text-color:                     #b5b5aa;
+}
+
+element selected.active {
+    background-color:               #9e9e95;
+    color:                          #b5b5aa;
+}

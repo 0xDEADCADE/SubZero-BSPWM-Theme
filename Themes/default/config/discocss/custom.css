@@ -1,0 +1,105 @@
+:root {
+  --background-primary : #151515;
+  --background-secondary : #151515;
+  --background-secondary-alt : #151515;
+  --background-tertiary : #1c1c1c;
+  --background-floating : #151515;
+  --header-primary : #e8e8d3;
+
+  --interactive-normal : #e8e8d3;
+  --interactive-hover : #f0f0e1;
+  --interactive-active : #f0f0e1;
+  --interactive-muted : #9e9e95;
+
+  --text-normal : #e8e8d3;
+  --text-link : #687363;
+  --text-muted : #9e9e95;
+
+  --channeltextarea-background : #1c1c1c;
+
+  --text-warning : #bf5858;
+
+  --brand-experiment : #2b2b2b !important;
+
+  --scrollbar-auto-track: #303030 !important;
+  --scrollbar-auto-thumb: #222222 !important;
+}
+
+.theme-dark .selected-1Tbx07 {
+￼    background-color: #151515 !important;
+}
+
+path {
+￼    color: #e8e8d3 !important;
+}
+
+.scroller-lynW5A .scrollerBase-289Jih .thin-lybCId {
+  background-color: #3b3b37 !important;
+}
+
+/* Hide some useless stuff */
+div[aria-label="Inbox"],
+div[aria-label="Help"],
+button[aria-label="Send a gift"],
+div[class^="flowerStarContainer"],
+div[data-list-item-id$="app-download-button"],
+div[class^="guildSeparator"],
+button[aria-label="Open sticker picker"],
+img[class^="replyAvatar"],
+div[class^="unread"],
+[data-list-id="expression-suggestions-stickers"],
+.container-JHR0NT {
+    display: none;
+}
+
+.container-1D34oG > div {
+  background-color : var(--background-primary);
+}
+
+.item-3HknzM[aria-label~=Add] {
+  background-color : #687363 !important;
+  color: #1b1b1b !important;
+}
+
+.sidebar-2K8pFh {
+  width : 0;
+  transition : width 0.6s;
+}
+
+.guilds-1SWlCJ:hover + .base-3dtUhz .sidebar-2K8pFh,
+.sidebar-2K8pFh:hover,
+.guilds-1SWlCJ:focus-within + .base-3dtUhz .sidebar-2K8pFh,
+.sidebar-2K8pFh:focus-within {
+  width : 240px !important;
+}
+
+.membersWrap-2h-GB4 {
+  min-width : 0;
+}
+
+.panels-j1ci_ {
+  border-radius: 0 15px 0 0;
+}
+
+.root-1gCeng,
+.footer-2gL1pp {
+  background-color: var(--background-primary) !important;
+}
+
+.circleIconButton-1QV--U, .circleButtonBase-2DCxIZ {
+  color: #e8e8d3 !important;
+  background-color: #151515 !important;
+}
+
+pre,code {
+  font-family: JetBrains Mono !important;
+}
+
+div#uid_43 {
+￼    background-color: #1c1c1c;
+}
+
+button.button-38aScr.lookFilled-1Gx00P.colorBrand-3pXr91.sizeMedium-1AC_Sl.grow-q77ONN {
+￼    background-color: #e8e8d3 !important;
+￼    color: #151515 !important;
+}

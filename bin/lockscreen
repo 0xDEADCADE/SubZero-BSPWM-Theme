@@ -1,0 +1,40 @@
+#!/bin/bash
+
+i3lock --nofork                 	\
+    --ignore-empty-password		\
+    					\
+    --indicator				\
+    --bar-indicator			\
+    --bar-pos="1075"			\
+    --bar-base-width="5"		\
+    --bar-orientation=horizontal	\
+    --bar-color=161616			\
+    --ringver-color=88c0d0		\
+    --ringwrong-color=bf616a		\
+    --bshl-color=5e81ac			\
+    --keyhl-color=a3be8c			\
+    					\
+    --clock				\
+    --time-color=eceff4ff		\
+    --time-str="%H:%M"			\
+    --time-font="Rubik Light"		\
+    --time-size=72			\
+    --time-pos="1440:810"		\
+    --time-color=e8e8d3ff		\
+    					\
+    --date-color=e8e8d3ff		\
+    --date-str="%A, %d %B"		\
+    --date-color=e8e8d3ff		\
+    --date-font="Rubik Light"		\
+    --date-size=18			\
+    --date-pos="1440:840"		\
+    					\
+    --verif-font="Rubik Light"		\
+    --verif-size=24			\
+    --verif-text="Welcome home!"		\
+    --verif-color=e8e8d3 		\
+    --wrong-font="Rubik Light"		\
+    --wrong-size=24			\
+    --wrong-text="Try again"		\
+    --wrong-color=e8e8d3			\
+    -i $SUBZERO_THEME_FILES/lockscreen.png

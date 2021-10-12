@@ -1,0 +1,19 @@
+#!/bin/bash
+
+bspc config top_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+bspc config bottom_padding 0
+
+# Generic config
+cp -r "${SUBZERO_THEME_FILES}/${1}/config/"* "${HOME}/.config/"
+# Images
+# Stretch the lockscreen image to display resolution (i3lock-color is not an image scaling program)
+convert "${SUBZERO_THEME_FILES}/${1}/lockscreen.png" -resize $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/') "${SUBZERO_THEME_FILES}/lockscreen.png"
+# The wallpaper is automatically stretched by feh
+cp -f "${SUBZERO_THEME_FILES}/${1}/wallpaper.jpg" "${SUBZERO_THEME_FILES}/wallpaper.jpg"
+
+killall -q tint2 dunst udiskie lock picom feh
+pkill sxhkd
+
+bspc wm -r

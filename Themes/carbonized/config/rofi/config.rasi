@@ -1,0 +1,90 @@
+configuration {
+	modi:						"drun";
+	font:							"Rubik 10";
+    display-drun: 					"";
+	sidebar-mode: 					false;
+}
+
+@theme "/dev/null"
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    transparency:                   "real";
+    background-color:               #b5b5aa;
+    text-color:                     #2b2b2b;
+    border-radius:                  7px;
+    width:			    40%;
+    y-offset:                       10px;
+    padding: 			    20px 20px 20px 20px;
+    location: 			south;
+}
+
+prompt {
+    enabled: 						true;
+	padding: 					0px 0px 0px 0px;
+	background-color: 				#9e9e95;
+	text-color: 					#2b2b2b;
+	font:						"Rubik 10";
+}
+
+entry {
+    background-color:               #9e9e95;
+    text-color:                     #2b2b2b;
+    placeholder-color:              #2b2b2b;
+    expand:                         true;
+    horizontal-align:               0;
+    padding:                        5px;
+}
+
+inputbar {
+	children: 						[ prompt, entry ];
+    background-color:               #9e9e95;
+    text-color:                     #2b2b2b;
+    expand:                         false;
+    border-radius:                  6px;
+    margin:                         0% 0% 0% 0%;
+    padding:                        8px;
+}
+
+listview {
+    background-color:               #b5b5aa;
+    columns:                        1;
+    lines:	                        8;
+    spacing:                        0%;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               #b5b5aa;
+    border-radius:                  0% 0% 0% 0%;
+    children:                       [ inputbar, listview ];
+    spacing:                       	2%;
+    padding:                        2% 1% 2% 1%;
+}
+
+element {
+    background-color:               #b5b5aa;
+    text-color:                     #2b2b2b;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        1.5% 0% 1.5% 0%;
+}
+
+element-text {
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% 0% 3%;
+}
+
+element selected {
+    background-color:               #2b2b2b;
+    text-color:                     #b5b5aa;
+    border-radius:                  6px;
+}
