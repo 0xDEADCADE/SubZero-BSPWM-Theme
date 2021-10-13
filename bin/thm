@@ -13,7 +13,7 @@ convert "${SUBZERO_THEME_FILES}/${1}/lockscreen.png" -resize $(xdpyinfo | grep d
 # The wallpaper is automatically stretched by feh
 cp -f "${SUBZERO_THEME_FILES}/${1}/wallpaper.jpg" "${SUBZERO_THEME_FILES}/wallpaper.jpg"
 
-killall -q tint2 dunst udiskie lock picom feh
+killall -q tint2 dunst udiskie lock picom xob
 pkill sxhkd
 
 bspc wm -r
