@@ -56,5 +56,5 @@ Use `pip` to install pulsectl. xob won't work without it.
 - ttf-jetbrains-mono
 - ttf-icomoon-feather
 - ttf-rubik
-- discocss (optional)
+- discocss-git (optional)
 

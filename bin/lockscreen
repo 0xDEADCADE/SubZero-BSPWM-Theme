@@ -37,4 +37,4 @@ i3lock --nofork                 	\
     --wrong-size=24			\
     --wrong-text="Try again"		\
     --wrong-color=e8e8d3			\
-    -i $SUBZERO_THEME_FILES/lockscreen.png
+    -i $SUBZERO_THEME_FILES/lockscreen.*

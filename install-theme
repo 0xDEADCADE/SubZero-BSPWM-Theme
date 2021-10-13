@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 install_files() {
   echo "Copying ./bin/* to ${SUBZERO_THEME_BIN}/"
@@ -12,22 +12,6 @@ install_files() {
   mkdir -p "$HOME/.local/share/fonts"
   cp -rf ./Fonts/* "$HOME/.local/share/fonts/"
 }
-
-if [[ -v $SUBZERO_THEME_VERSION ]]; then
-  INSTALLED_SUBZERO_THEME_VERSION=$SUBZERO_THEME_VERSION
-  source ./Themes/SubZero_Version
-  if [[ $INSTALLED_SUBZERO_THEME_VERSION != $SUBZERO_THEME_VERSION ]]; then
-    echo "Updating Theme"
-    read -p "Press enter to update..."
-    install_files
-    echo "Done!"
-    exit
-  else
-    echo "Theme is already installed!"
-    echo "Change the theme by pressing super+shift+c"
-    exit
-  fi
-fi
 
 read -p "Bin install directory (Needs to be in \$PATH) (~/.local/bin) > " SUBZERO_THEME_BIN
 if [[ -z $SUBZERO_THEME_BIN ]]; then
