@@ -1,41 +1,11 @@
 #!/bin/sh
 
-source ~/.subzerorc
+source "$HOME/.subzerorc"
 
-# Simple X Hotkey Daemon
-sxhkd &
-
-# Make sure discocss is initialized
-prepare-discocss &
-discocss-nostart &
+if [[ -f "$SUBZERO_THEME_FILES/bspwmrc" ]]; then
+    source "$SUBZERO_THEME_FILES/bspwmrc"
+fi
 
 # Wallpaper
 feh --bg-fill "$SUBZERO_THEME_FILES/wallpaper.jpg" &
-# Compositor
-picom -b &
-
-xsetroot -cursor_name left_ptr &
-
-# Volume bar
-xob-start &
-# Generic bar
-tint2-start &
-# Autolock
-lock 600 &
-
-# Automount USB
-udiskie --tray &
-
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
-
-bspc config border_width         0
-bspc config window_gap           6
-
-bspc config split_ratio          0.50
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
-bspc config focus_follows_pointer true
-
-bspc rule -a Rofi state=floating
-bspc rule -a mpv state=floating
 

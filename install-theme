@@ -4,11 +4,16 @@ install_files() {
   echo "Copying ./bin/* to ${SUBZERO_THEME_BIN}/"
   chmod +x ./bin/*
   cp -rf ./bin/* "${SUBZERO_THEME_BIN}/"
+
   echo "Copying ./Themes/* to ${SUBZERO_THEME_FILES}/"
   cp -rf ./Themes/* "${SUBZERO_THEME_FILES}/"
+
+  echo "Copying font to $HOME/.local/share/fonts"
+  mkdir -p "$HOME/.local/share/fonts"
+  cp -rf ./Fonts/* "$HOME/.local/share/fonts/"
 }
 
-if [[ -v $SUBZERO_THEME_BIN ]]; then
+if [[ -v $SUBZERO_THEME_VERSION ]]; then
   INSTALLED_SUBZERO_THEME_VERSION=$SUBZERO_THEME_VERSION
   source ./Themes/SubZero_Version
   if [[ $INSTALLED_SUBZERO_THEME_VERSION != $SUBZERO_THEME_VERSION ]]; then
@@ -42,11 +47,11 @@ else
 fi
 echo "Set bin install directory to ${SUBZERO_THEME_FILES}"
 
-echo "Installing default theme."
+echo "Installing themes"
 read -p "Press enter to install..."
 
-mkdir $SUBZERO_THEME_BIN
-mkdir $SUBZERO_THEME_FILES
+mkdir $SUBZERO_THEME_BIN 2>/dev/null
+mkdir $SUBZERO_THEME_FILES 2>/dev/null
 
 export SUBZERO_THEME_BIN=$SUBZERO_THEME_BIN
 export SUBZERO_THEME_FILES=$SUBZERO_THEME_FILES
